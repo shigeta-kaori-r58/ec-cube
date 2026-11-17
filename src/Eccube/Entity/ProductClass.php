@@ -271,12 +271,19 @@ if (!class_exists(ProductClass::class)) {
          */
         private $ProductStock;
 
-        /**
+                /**
          * @var TaxRule
          *
          * @ORM\OneToOne(targetEntity="Eccube\Entity\TaxRule", mappedBy="ProductClass", cascade={"persist","remove"})
          */
         private $TaxRule;
+
+        /**
+         * @var StockAlertSetting|null
+         *
+         * @ORM\OneToOne(targetEntity="Eccube\Entity\StockAlertSetting", mappedBy="ProductClass", cascade={"persist","remove"})
+         */
+        private $StockAlertSetting;
 
         /**
          * @var Product
@@ -649,7 +656,7 @@ if (!class_exists(ProductClass::class)) {
             return $this->ProductStock;
         }
 
-        /**
+                /**
          * Set taxRule.
          *
          * @param TaxRule|null $taxRule
@@ -671,6 +678,30 @@ if (!class_exists(ProductClass::class)) {
         public function getTaxRule()
         {
             return $this->TaxRule;
+        }
+
+        /**
+         * Set stockAlertSetting.
+         *
+         * @param StockAlertSetting|null $stockAlertSetting
+         *
+         * @return ProductClass
+         */
+        public function setStockAlertSetting(?StockAlertSetting $stockAlertSetting = null)
+        {
+            $this->StockAlertSetting = $stockAlertSetting;
+
+            return $this;
+        }
+
+        /**
+         * Get stockAlertSetting.
+         *
+         * @return StockAlertSetting|null
+         */
+        public function getStockAlertSetting()
+        {
+            return $this->StockAlertSetting;
         }
 
         /**

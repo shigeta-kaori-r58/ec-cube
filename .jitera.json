@@ -1,4 +1,9 @@
 {
   "environment": "https://studio.jitera.app",
-  "project": "a031a015-608c-45c2-80e4-0c12c12fff47"
+  "project": "a031a015-608c-45c2-80e4-0c12c12fff47",
+  "agents": [
+    "65a8ecd2-0603-45ec-b9b4-879b42753f33",
+    "b6107d1c-4488-458e-9511-1e8e699ead13",
+    "94997e20-cb2a-4a52-a913-b9a1ea537f77"
+  ]
 }
